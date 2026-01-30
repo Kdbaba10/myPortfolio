@@ -52,7 +52,7 @@ Alongside my medical journey, I have a growing interest in technology, web devel
 
 ## 🌍 Live Preview
 
-You can view the live version of this portfolio using **GitHub Pages** (if enabled):
+You can view the live version of this portfolio using **GitHub Pages**:
 
 👉 https://kdbaba10.github.io/myPortfolio
 
