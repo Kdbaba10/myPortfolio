@@ -7,13 +7,66 @@
     <title>Khadija Dahira Baba | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      :root {
+        --primary: #cdd0f8;      /* soft lavender tech */
+        --secondary: #fa9bcf;    /* blush pink */
+        --accent: #eaccf1;       /* lilac glow */
+        --bg-soft: #f3f4f7;      /* soft card background */
+        --text-main: #2b2b2b;
+        --text-muted: #6c757d;
+      }
+    
+      body {
+        color: var(--text-main);
+      }
+    
+      /* Section titles */
+      h3 {
+        color: #4a4a7a;
+        letter-spacing: 0.5px;
+      }
+    
+      /* Soft floating cards */
+      .card {
+        background-color: var(--bg-soft);
+        border: none;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+    
+      /* Buttons – elegant tech glow */
+      .btn {
+        border-radius: 30px;
+        padding: 10px 24px;
+        transition: all 0.3s ease;
+      }
+    
+      .btn:hover {
+        background-color: var(--primary);
+        color: #fff;
+        box-shadow: 0 10px 30px rgba(205, 208, 248, 0.6);
+      }
+    
+      /* Links */
+      a {
+        color: #5f5fa8;
+        text-decoration: none;
+      }
+    
+      a:hover {
+        color: #fa9bcf;
+      }
+    </style>
+    
   </head>
+
 
 
 <!-- Navbar -->
 
-<body class="p-3 ms-auto border-0" style="background-image:linear-gradient(to left, #ecd5f3, #c9d5f0);">
-    <nav class="navbar navbar-collapse" style="background-image:linear-gradient(to left, #cdd7ef,  #c9d5f0);">
+<body class="p-3 border-0" style="background: linear-gradient(135deg, #fefefe, #e1e5f1);">
+  <nav class="navbar navbar-expand-lg"
+  style="background: rgba(201, 213, 240, 0.9); backdrop-filter: blur(10px);">
         <a class="navbar-brand" style="padding:20px;" href="#"> <h1>My Portfolio</h1></a>
           <button  class="navbar-toggler" style="margin:20px;" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
@@ -23,7 +76,6 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
@@ -39,18 +91,17 @@
           <div class="col-md-4">
             <div class="card shadow position-sticky top-0"
                  style="border-radius: 40px; height: 600px; background-color: #f3f4f7;">
-      
+       <!--Profile pic -->
               <img src="https://images.unsplash.com/photo-1626808642875-0aa545482dfb?q=80&w=687&auto=format&fit=crop"
                    class="rounded-circle shadow d-block mx-auto mt-4"
                    style="width: 140px; height: 140px; object-fit: cover;"
                    alt="profile pic">
               <h5 class="text-center mt-3">KHADIJA DAHIRA BABA</h5>
               <h6 class="text-center text-muted">Medical Student</h6>
+              <a href="#contact" class="btn btn-light mt-2">Contact Me</a>
       
               <div class="card-body text-center mt-3">
-                <a href="https://www.linkedin.com/in/khadija-dahira-baba-6a5a5b1b2/" class="card-link">LinkedIn</a>
-                <a href="https://github.com/khadija-dahira-baba" class="card-link">Github</a>
-                <a href="https://www.instagram.com/khadija_dahira_baba/" class="card-link">Instagram</a>
+               
               </div>
       
             </div>
@@ -67,6 +118,8 @@
 
                 <div class="container" id="about">
                 <article >
+
+                  
                     <h3 class="text-center mt-4" style="border-bottom-color:#e9cdef; 
                     border-bottom-style: solid; border-bottom-width:1px;">About me</h3>
                     <p>I’m a curious, passionate medical student who loves learning new things and exploring life with an open heart.
@@ -120,7 +173,7 @@
           border-bottom-style: solid; border-bottom-width:1px;">Projects</h3>
          <article >
          <img class="mt-3"
-         src="" alt="pj1"
+         src="https://static.wixstatic.com/media/2def06_9b2fdb9d28d34940aa94339c268088ef~mv2.png/v1/fill/w_500,h_500,al_c,q_85,enc_auto/Millennium_Fellowship_H_Transparent.png" alt="pj1"
          style="width: 140px; height: 140px; object-fit: cover;">
 
          
@@ -141,7 +194,7 @@
               trust, cultural understanding, and long-term thinking—not just interventions.
             </p>
             <a 
-            href="" 
+            href="projects.html" 
             class="btn"
             style="border-color: #CDD0f8; border-width:3px;">
             View Project Presentation
@@ -151,7 +204,7 @@
 
          <section >
           <img class="mt-5"
-          src="" alt="pj1"
+          src="https://www.shutterstock.com/image-vector/hand-care-logo-template-vector-600nw-2454016627.jpg" alt="pj1"
           style="width: 140px; height: 140px; object-fit: cover; border-top:whitesmoke;">
  
           
@@ -188,12 +241,19 @@
 
            <!-- skills -->
         <div class="container" id="skills">
+          
             <h3 class="container-title text-center mt-4" style="border-bottom-color:#e9cdef; 
             border-bottom-style: solid; border-bottom-width:1px;">Skills</h3>
             </div>
 
+            
+            <p class="text-center text-muted mb-3">
+              Still learning. Still growing 🌱
+            </p>
 
-            <div class="progress-stacked text-center md-3">
+           
+            <div class="progress-stacked rounded-pill overflow-hidden">
+
             <div class="progress-bar"
             role="progressbar"
             style="width: 40%; background-color: #CDD0f8; "
@@ -201,6 +261,7 @@
             aria-valuenow="40"
             aria-valuemin="0"
             aria-valuemax="100">html</div>
+            
 
             <div class="progress-bar"
             role="progressbar"
@@ -236,9 +297,59 @@
             aria-valuemin="0"
             aria-valuemax="100">R</div>
             </div>
+<!-- INTERESTS -->
+<div class="container" id="interest">
+          
+  <h3 class="container-title text-center mt-4" style="border-bottom-color:#e9cdef; 
+  border-bottom-style: solid; border-bottom-width:1px;">Interests</h3>
+  </div>
+
+    <div class="row text-center g-4">
+
+      <div class="col-md-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <h5>Medicine</h5>
+            <p class="text-muted">Clinical learning & healthcare</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <h5>Technology</h5>
+            <p class="text-muted">Web & digital tools</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <h5>Research</h5>
+            <p class="text-muted">Academic exploration</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <h5>Creative Work</h5>
+            <p class="text-muted">Design & innovation</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
-
+            <a href="https://www.linkedin.com/in/khadija-dahira-baba-6a5a5b1b2/" class="card-link">LinkedIn</a>
+            <a href="https://github.com/Kdbaba10" class="card-link">Github</a>
+            <a href="https://www.instagram.com/elouramedix/" class="card-link">Instagram</a>
 
             
     </body>

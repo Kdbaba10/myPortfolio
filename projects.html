@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Projects</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+/* ===== GLOBAL ===== */
+:root {
+        --primary: #cdd0f8;      /* soft lavender tech */
+        --secondary: #fa9bcf;    /* blush pink */
+        --accent: #eaccf1;       /* lilac glow */
+        --bg-soft: #f3f4f7;      /* soft card background */
+        --text-main: #2b2b2b;
+        --text-muted: #6c757d;
+      }
+      
+body{
+margin:0;
+background: linear-gradient(135deg, #fefefe, #e1e5f1);;
+overflow-x:hidden;
+}
+
+/* ===== INTRO SCREEN ===== */
+#intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:linear-gradient(135deg, #fefefe, #e1e5f1);;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+animation:fadeOut 1.5s ease forwards;
+animation-delay:2.5s;
+}
+
+#intro h1{
+font-size:4rem;
+color:#2b2b2b;
+letter-spacing:3px;
+font-weight:600;
+}
+
+@keyframes fadeOut{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* ===== GALLERY GRID ===== */
+.project-card{
+border:none;
+border-radius:25px;
+overflow:hidden;
+cursor:pointer;
+transition:0.4s ease;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.project-card:hover{
+transform:translateY(-10px) scale(1.02);
+}
+
+.project-card img{
+height:260px;
+object-fit:cover;
+}
+
+/* ===== TITLE OVER IMAGE ===== */
+.overlay-title{
+position:absolute;
+bottom:0;
+width:100%;
+padding:12px;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(6px);
+text-align:center;
+font-weight:600;
+}
+
+/* ===== MODAL ===== */
+.modal-content{
+border-radius:25px;
+overflow:hidden;
+}
+
+.carousel-item img{
+height:75vh;
+object-fit:cover;
+}
+
+.ppt-link{
+  text-decoration:none;
+}
+
+.ppt-card{
+  width:280px;
+  height:180px;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+  border-radius:20px;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transition:all 0.4s ease;
+  box-shadow:0 15px 35px rgba(0,0,0,.25);
+  position:relative;
+  overflow:hidden;
+}
+
+/* floating glow */
+.ppt-card::before{
+  content:"";
+  position:absolute;
+  width:140%;
+  height:140%;
+  background:radial-gradient(circle,rgba(255,255,255,.15),transparent 70%);
+  top:-70%;
+  left:-70%;
+  transition:0.5s;
+}
+
+.ppt-card:hover::before{
+  top:0;
+  left:0;
+}
+
+.ppt-card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+/* text */
+.ppt-icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.ppt-card h3{
+  margin:5px 0;
+  font-weight:600;
+}
+
+.ppt-card p{
+  opacity:0.8;
+  font-size:14px;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 rgba(255,255,255,.3);}
+  50%{box-shadow:0 0 25px rgba(255,255,255,.5);}
+  100%{box-shadow:0 0 0 rgba(255,255,255,.3);}
+}
+
+.ppt-card{
+  animation:pulse 4s infinite;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+<h1>My Projects ✨</h1>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container py-5" style="margin-top:80px;">
+
+<h2 class="text-center mb-5" style="color:#5a5a8a;">Project Showcase</h2>
+
+<div class="row g-4">
+
+
+<!-- ===== MILLENNIUM MODAL ===== -->
+<div class="col-md-4">
+    <div class="project-card position-relative"
+         data-bs-toggle="modal"
+         data-bs-target="#millenniumModal">
+  
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="w-100">
+      <div class="overlay-title">Millennium Fellowship</div>
+  
+    </div>
+  </div>
+  <div class="modal fade" id="millenniumModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-body p-0">
+  
+          <div id="millenniumCarousel"
+               class="carousel slide"
+               data-bs-ride="carousel"
+               data-bs-interval="2500">
+  
+            <!-- indicators -->
+            <div class="carousel-indicators">
+              <button data-bs-target="#millenniumCarousel" data-bs-slide-to="0" class="active"></button>
+              <button data-bs-target="#millenniumCarousel" data-bs-slide-to="1"></button>
+              <button data-bs-target="#millenniumCarousel" data-bs-slide-to="2"></button>
+            </div>
+  
+            <!-- slides -->
+            <div class="carousel-inner">
+  
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"" class="d-block w-100">
+              </div>
+  
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"" class="d-block w-100">
+              </div>
+  
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"" class="d-block w-100">
+              </div>
+  
+            </div>
+  
+            <!-- controls -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#millenniumCarousel"
+                    data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+  
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#millenniumCarousel"
+                    data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== OUTREACH MODAL ===== -->
+<div class="col-md-4">
+    <div class="project-card position-relative"
+         data-bs-toggle="modal"
+         data-bs-target="#outreachModal">
+  
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="w-100">
+      <div class="overlay-title">Community Outreach</div>
+  
+    </div>
+  </div>
+  <div class="modal fade" id="outreachModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-body p-0">
+  
+          <div id="outreachCarousel"
+               class="carousel slide"
+               data-bs-ride="carousel"
+               data-bs-interval="2500">
+  
+            <!-- indicators -->
+            <div class="carousel-indicators">
+              <button data-bs-target="#outreachCarousel" data-bs-slide-to="0" class="active"></button>
+              <button data-bs-target="#outreachCarousel" data-bs-slide-to="1"></button>
+              <button data-bs-target="#outreachCarousel" data-bs-slide-to="2"></button>
+            </div>
+  
+            <!-- slides -->
+            <div class="carousel-inner">
+  
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"" class="d-block w-100">
+              </div>
+  
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"" class="d-block w-100">
+              </div>
+  
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"" class="d-block w-100">
+              </div>
+  
+            </div>
+  
+            <!-- controls -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#outreachCarousel"
+                    data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+  
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#outreachCarousel"
+                    data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ===== Research MODAL ===== -->
+<div class="col-md-4">
+    <div class="project-card position-relative"
+         data-bs-toggle="modal"
+         data-bs-target="#researchModal">
+  
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" class="w-100">
+      <div class="overlay-title">Research and Learning</div>
+  
+    </div>
+  </div>
+  <div class="modal fade" id="researchModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-body p-0">
+  
+          <div id="researchCarousel"
+               class="carousel slide"
+               data-bs-ride="carousel"
+               data-bs-interval="2500">
+  
+            <!-- indicators -->
+            <div class="carousel-indicators">
+              <button data-bs-target="#researchCarousel" data-bs-slide-to="0" class="active"></button>
+              <button data-bs-target="#researchCarousel" data-bs-slide-to="1"></button>
+              <button data-bs-target="#researchCarousel" data-bs-slide-to="2"></button>
+            </div>
+  
+            <!-- slides -->
+            <div class="carousel-inner">
+  
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"" class="d-block w-100">
+              </div>
+  
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"" class="d-block w-100">
+              </div>
+  
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"" class="d-block w-100">
+              </div>
+  
+            </div>
+  
+            <!-- controls -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#researchCarousel"
+                    data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+  
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#researchCarousel"
+                    data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center" style="height:25vh;">
+  <a href="images/MILLENIUM FELLOWSHIP.pptx"
+   target="_blank"
+   class="ppt-link">
+
+  <div class="ppt-card">
+    <span class="ppt-icon">📊</span>
+    <h3>Millennium Fellowship</h3>
+    <p>View presentation</p>
+  </div>
+
+</a>
